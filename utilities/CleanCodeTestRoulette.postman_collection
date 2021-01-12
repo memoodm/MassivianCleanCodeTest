@@ -1,0 +1,122 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Roulette",
+		"_postman_id": "38142df9-f039-f434-4d2d-e45306eab506",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "getAll",
+			"request": {
+				"url": "http://localhost/roulette/api/roulette",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "create",
+			"request": {
+				"url": "http://localhost/roulette/api/roulette",
+				"method": "POST",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "activate table",
+			"request": {
+				"url": {
+					"raw": "http://localhost/roulette/api/roulette/open?rouletteId=a34902e1-2638-4769-acdc-5a0381d4f340",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"roulette",
+						"api",
+						"roulette",
+						"open"
+					],
+					"query": [
+						{
+							"key": "rouletteId",
+							"value": "a34902e1-2638-4769-acdc-5a0381d4f340",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "add gamble",
+			"request": {
+				"url": "http://localhost/roulette/api/gamble",
+				"method": "POST",
+				"header": [
+					{
+						"key": "userId",
+						"value": "guillex2",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"rouletteId\":\"f292a26d-b8fc-49ae-84c8-e3845ce36b75\",\n\t\"money\": 100,\n\t\"mode\": \"BY_COLOR\",\n\t\"item\": \"BLACK\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "close table",
+			"request": {
+				"url": {
+					"raw": "http://localhost/roulette/api/roulette/close?rouletteId=f292a26d-b8fc-49ae-84c8-e3845ce36b75",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"roulette",
+						"api",
+						"roulette",
+						"close"
+					],
+					"query": [
+						{
+							"key": "rouletteId",
+							"value": "f292a26d-b8fc-49ae-84c8-e3845ce36b75",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
